@@ -1,0 +1,43 @@
+body {
+    background: linear-gradient(90deg, rgb(204, 204, 204), rgb(255, 255, 255));
+}
+
+h1 {
+    text-align: center;
+}
+
+.div-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.075);
+    margin: 0 auto;
+    width: 800px;
+    height: 800px;
+}
+
+.row {
+    display: flex;
+    flex: 1; 
+}
+
+.vert-box {
+    flex: 1; 
+    border: 1px solid grey;
+}
+
+.controls {
+    position: absolute;
+    box-shadow: 20px 20px rgba(0, 0, 0, 0.075);
+    top: 88px;
+    right: 200px; 
+    border: 2px solid black;
+    height: 800px;
+    width: 300px;
+}
+
+.controls h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
