@@ -1,5 +1,6 @@
 function createBoard(size) {
     const container = document.querySelector('.div-container');
+    const gridEnable = document.querySelector('#grid')
     const rowSize = Math.sqrt(size*size);
 
     for (let i = 0; i < rowSize; i++) {
@@ -18,6 +19,21 @@ function createBoard(size) {
         }
         container.appendChild(rowDiv)
       }
-}
+    
+    function updateGridBorders() {
+        const borderStyle = gridEnable.checked ? '1px solid grey' : 'none';
+        document.querySelectorAll('.vert-box').forEach(box => {
+            box.style.border = borderStyle;
+        });
+    }
 
-createBoard(64)
+
+    updateGridBorders()
+
+    gridEnable.addEventListener('change', (updateGridBorders()))
+    gridEnable.addEventListener('click', () => {
+        location.reload();
+    })
+
+}
+createBoard(64);

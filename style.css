@@ -23,7 +23,6 @@ h1 {
 
 .vert-box {
     flex: 1; 
-    border: 1px solid grey;
 }
 
 .controls {
@@ -41,3 +40,18 @@ h1 {
     font-size: 32px;
 }
 
+.inputs {
+    text-align: center;
+    user-select: none;
+}
+
+#sizeInput {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+.sizeP {
+    padding-top: 10px;
+    margin-bottom: 0;
+}
