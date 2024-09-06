@@ -3,7 +3,8 @@ function createBoard(size) {
     const gridEnable = document.querySelector('#grid');
     const sizeInput = document.querySelector('#sizeInput');
     const sizeValue = document.querySelector('.sizeValue');
-    sizeValue.textContent = sizeInput.value;
+    const colorPicker = document.querySelector('.colorPicker')
+    sizeValue.textContent = `${sizeInput.value}x${sizeInput.value}`;
 
     container.innerHTML = '';
 
@@ -19,7 +20,7 @@ function createBoard(size) {
             vertDiv.classList.add('vert-box', 'boardDiv');
 
             vertDiv.addEventListener('mouseenter', () => {
-                vertDiv.style.backgroundColor = 'rgb(143, 143, 143)';
+                vertDiv.style.backgroundColor = colorPicker.value;
             });
 
             rowDiv.appendChild(vertDiv);
@@ -41,7 +42,7 @@ function createBoard(size) {
     gridEnable.addEventListener('change', updateGridBorders);
 
     sizeInput.addEventListener('input', debounce(() => {
-        sizeValue.textContent = sizeInput.value;
+        sizeValue.textContent = `${sizeInput.value}x${sizeInput.value}`;
         createBoard(sizeInput.value);
     }, 200)); 
 }
@@ -54,4 +55,8 @@ function debounce(func, delay) {
     };
 }
 
-createBoard(64);
+function refreshPage() {
+    location.reload();
+}
+
+createBoard(sizeInput.value);

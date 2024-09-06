@@ -1,5 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+
 body {
     background: linear-gradient(90deg, rgb(204, 204, 204), rgb(255, 255, 255));
+    font-family: 'SUSE', sans-serif;
 }
 
 h1 {
@@ -28,7 +31,7 @@ h1 {
 .controls {
     position: absolute;
     box-shadow: 20px 20px rgba(0, 0, 0, 0.075);
-    top: 88px;
+    top: 83px;
     right: 200px; 
     border: 2px solid black;
     height: 800px;
@@ -49,9 +52,54 @@ h1 {
     display: flex;
     justify-content: center;
     margin: 0px auto;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.075);
 }
 
 .sizeP {
     padding-top: 10px;
-    margin-bottom: 0;
+
 }
+
+.sizeValue {
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.resetBorder {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 325px;
+    border-top: 2px solid rgba(0, 0, 0, 0.24); 
+    padding-top: 10px;
+}
+
+.resetBtn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid rgba(0, 0, 0, 0.479);
+    border-radius: 5px;
+    font-size: 18px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.075);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+
+
+.colorPicker {
+    margin-bottom: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+}
+
+
+

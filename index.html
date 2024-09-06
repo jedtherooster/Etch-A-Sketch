@@ -13,9 +13,15 @@
             <h2>Controls</h2>
             <div class="inputs">
                 <label><input type="checkbox" name="grid" id="grid"> Enable Grids</label>
-                <p class="sizeP">Size</p>
-                <input type="range" name="sizeInput" id="sizeInput" min="8" max="128">
+                <p class="sizeP">Size:</p>
+                <input type="range" name="sizeInput" id="sizeInput" min="4" max="128" step="4">
                 <p class="sizeValue">64x64</p>
+                <p>Selected Color: </p>
+                <input type="color" name="" class="colorPicker">
+                <div class="resetBorder">
+                    <button onclick="refreshPage()" class="resetBtn">Reset Drawing</button>
+                </div>
+                
             </div>
         </div>
         <div class="div-container"></div>
